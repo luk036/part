@@ -43,6 +43,7 @@ public:
                  unsigned int fromPart, 
                  unsigned int toPart) const
   {
+    const int weight = cell.getWeight();
     return _diff[toPart] + weight <= _upperBound 
            && _diff[fromPart] - weight >= _lowerBound;
   }
